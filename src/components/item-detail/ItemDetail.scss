@@ -1,0 +1,118 @@
+@use '../../styles/variables';
+
+.item-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  background-color: variables.$background-color-white;
+  margin: 24px 0;
+
+  &__container {
+    display: flex;
+    gap: 48px;
+    background-color: variables.$background-color-white;
+    border-radius: 4px;
+    margin: 24px 0;
+  }
+
+  &__gallery {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 24px;
+  }
+
+  &__thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border-color 0.2s ease;
+
+    &:hover {
+      border-color: variables.$blue-color;
+    }
+
+    &--active {
+      border-color: variables.$blue-color;
+    }
+  }
+
+  &__image {
+    width: 680px;
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  &__condition {
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 8px;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+
+  &__seller {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 28px;
+  }
+
+  &__price {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &__installment {
+    color: #00a650;
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  &__shipping {
+    font-size: 14px;
+    color: #00a650;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  &__color {
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  &__description {
+    padding: 24px;
+    border-radius: 4px;
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    p {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.6;
+    }
+  }
+}
