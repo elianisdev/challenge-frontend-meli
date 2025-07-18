@@ -1,0 +1,74 @@
+@use '../../styles/variables.scss';
+
+.item-search-result {
+  display: flex;
+  flex: 1;
+  padding: 12px;
+  background-color: variables.$background-color-white;
+  border-bottom: thin solid variables.$gray-color-light-2;
+
+  &__container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+
+  &__image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    width: 259px;
+    height: 250px;
+    object-fit: contain;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+  }
+
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 6px;
+  }
+
+  &__title {
+    font-size: 20px;
+    color: variables.$black-color;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  &__store {
+    font-size: 14px;
+    color: variables.$gray-color-light;
+    font-weight: 100;
+  }
+
+  &__price {
+    font-size: 24px;
+    color: variables.$black-color;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  &__shipping {
+    font-size: 14px;
+    color: variables.$green-color;
+    font-weight: 400;
+    margin: 0 0 25px 0;
+  }
+
+}

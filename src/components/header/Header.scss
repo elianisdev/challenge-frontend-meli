@@ -1,0 +1,67 @@
+.header {
+  background-color: #FFE600;
+  padding: 8px 0;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  height: 34px;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__logo {
+    width: 148px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  &__form {
+    width: 1018px;
+    display: flex;
+    background-color: white;
+    border-radius: 4px;
+    height: 100%;
+    align-items: center;
+    margin-left: 34px;
+  }
+
+  &__input {
+    padding: 0 12px;
+    font-size: 16px;
+    font-family: 'Proxima Nova', sans-serif;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.55);
+    border: none;
+    outline: none;
+    background-color: white;
+    width: 100%;
+  }
+
+  &__button {
+    background-color: white;
+    border: none;
+    width: 48px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #ccc;
+  }
+
+  .header__search-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+      padding: 8px 20px;
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #e6e6e6;
+  padding: 24px 0;
+  margin-top: auto;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 24px;
+    }
+  }
+
+  &__text {
+    font-family: 'Proxima Nova', sans-serif;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  &__link {
+    color: #3483fa;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: #2968c8;
+      text-decoration: underline;
+    }
+  }
+} 

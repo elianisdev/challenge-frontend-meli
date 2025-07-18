@@ -1,16 +1,15 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@use './variables.scss';
 
-  color-scheme: light dark;
-  color: #242424;
-  background-color: #ffffff;
+body {
+  margin: 0;
+  background-color: variables.$background-color-primary;
+  font-family: variables.$font-family-base;
+  font-weight: variables.$font-weight-base;
+}
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
 }
 
 a {
@@ -22,12 +21,4 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-}
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
