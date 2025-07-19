@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ItemSearchResult } from '../../components/item-search-result/ItemSearchResult';
 import { Pagination } from '../../components/pagination/Pagination';
-import { Loading } from '../../components/loading/loading';
+import { Loading } from '../../components/loading/Loading';
 import { useFetchItems } from '../../hooks/useFetchItems';
 import { ItemsNotFound } from '../../components/items-not-found/ItemsNotFound';
 import './ItemResultsPage.scss';

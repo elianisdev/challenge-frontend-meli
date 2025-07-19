@@ -1,4 +1,5 @@
 import React from 'react';
+import notFoundImage from '../../assets/not-found-content.png';
 import './ItemsNotFound.scss';
 
 export const ItemsNotFound = () => {
@@ -6,12 +7,7 @@ export const ItemsNotFound = () => {
     <div className="items-not-found">
       <div className="items-not-found__container">
         <div className="items-not-found__icon">
-          <img
-            src="https://http2.mlstatic.com/frontend-assets/search-nordic/not-found.svg"
-            alt="No se encontraron resultados"
-            width="64"
-            height="64"
-          />
+          <img src={notFoundImage} alt="No se encontraron resultados" width="64" height="64" />
         </div>
         <div className="items-not-found__content">
           <h3 className="items-not-found__title">

@@ -1,30 +1,38 @@
+@use '../../styles/variables.scss';
+
 .pagination {
   display: flex;
-  gap: 4px;
   justify-content: center;
+  gap: 2px;
   margin: 24px 0;
-}
 
-.pagination__btn {
-  background: #fff;
-  border: 1px solid #ddd;
-  color: #333;
-  padding: 6px 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background 0.2s, border-color 0.2s;
-}
+  &__btn {
+    background: none;
+    border: none;
+    color: variables.$black-color;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 4px 6px;
+    transition: color 0.2s;
+    border-radius: 4px;
 
-.pagination__btn--active,
-.pagination__btn:disabled {
-  background: #3483fa;
-  color: #fff;
-  border-color: #3483fa;
-  cursor: default;
-}
+    &--active {
+      width: 28px;
+      height: 28px;
+      padding: 4px 0;
+      border: 1px solid variables.$blue-color;
+      background: variables.$background-color-white;
+      color: variables.$black-color;
+    }
 
-.pagination__btn:not(:disabled):hover {
-  background: #f0f4ff;
-  border-color: #3483fa;
-} 
+    &:hover:not(.pagination__btn--active):not(:disabled) {
+      color: variables.$blue-color;
+    }
+
+    &:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+  }
+}

@@ -1,5 +1,7 @@
+@use '../../styles/variables.scss';
+
 .header {
-  background-color: #FFE600;
+  background-color: variables.$background-color-secondary;
   padding: 8px 0;
   display: flex;
   flex-flow: row nowrap;
@@ -32,9 +34,9 @@
   &__input {
     padding: 0 12px;
     font-size: 16px;
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: variables.$font-family-base;
     font-weight: 400;
-    color: rgba(0, 0, 0, 0.55);
+    color: variables.$gray-color-light;
     border: none;
     outline: none;
     background-color: white;
@@ -50,7 +52,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-left: 1px solid #ccc;
+    border-left: 1px solid variables.$gray-color-light-2;
   }
 
   .header__search-icon {

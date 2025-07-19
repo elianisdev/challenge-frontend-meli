@@ -1,0 +1,12 @@
+.item-detail-page {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 30px;
+}
+
+@media (max-width: 1200px) {
+  .item-detail-page {
+    padding: 0 15px;
+  }
+}

@@ -1,6 +1,8 @@
+@use '../../styles/variables.scss';
+
 .footer {
-  background-color: #fff;
-  border-top: 1px solid #e6e6e6;
+  background-color: variables.$background-color-white;
+  border-top: 1px solid variables.$gray-color-light-2;
   padding: 24px 0;
   margin-top: auto;
 
@@ -25,20 +27,20 @@
   }
 
   &__text {
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: variables.$font-family-base;
     font-size: 14px;
-    color: #666;
+    color: variables.$gray-color-light;
     margin: 0;
   }
 
   &__link {
-    color: #3483fa;
+    color: variables.$blue-color;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
 
     &:hover {
-      color: #2968c8;
+      color: variables.$blue-color;
       text-decoration: underline;
     }
   }

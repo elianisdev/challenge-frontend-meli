@@ -26,26 +26,25 @@ export const Pagination = ({ currentPage, totalPages, onPageChange }) => {
 
   return (
     <nav className="pagination">
-      <button className="pagination__btn" onClick={handlePrev} disabled={currentPage === 1}>
-        {'< Anterior'}
-      </button>
+      {currentPage > 1 && (
+        <button className="pagination__btn" onClick={handlePrev}>
+          <span className="pagination__btn-text">{'<'} Anterior</span>
+        </button>
+      )}
       {getPageNumbers().map((page) => (
         <button
           key={page}
           className={`pagination__btn${page === currentPage ? ' pagination__btn--active' : ''}`}
           onClick={() => onPageChange(page)}
-          disabled={page === currentPage}
         >
-          {page}
+          <span className="pagination__btn-text">{page}</span>
         </button>
       ))}
-      <button
-        className="pagination__btn"
-        onClick={handleNext}
-        disabled={currentPage === totalPages}
-      >
-        {'Siguiente >'}
-      </button>
+      {currentPage < totalPages && (
+        <button className="pagination__btn" onClick={handleNext}>
+          <span className="pagination__btn-text">Siguiente {'>'}</span>
+        </button>
+      )}
     </nav>
   );
 };

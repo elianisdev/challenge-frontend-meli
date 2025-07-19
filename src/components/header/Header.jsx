@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import logo from '../../assets/logo_large_25years@2x.png';
+import searchIcon from '../../assets/ic_Search@2x.png';
 import './Header.scss';
 
 export const Header = () => {
@@ -19,26 +21,22 @@ export const Header = () => {
   return (
     <div className={'header'}>
       <div className={'header__container'}>
-          <Link to={'/'}>
-            <img className={'header__logo'} src={'src/assets/logo_large_25years@2x.png'} alt={'Mercado Libre logo'}/>
-          </Link>
+        <Link to={'/'}>
+          <img className={'header__logo'} src={logo} alt={'Mercado Libre logo'} />
+        </Link>
         <form className={'header__form'} onSubmit={handleSubmit}>
           <input
-            id='keyword'
-            name='keyword'
+            id="keyword"
+            name="keyword"
             className={'header__input'}
             type="text"
             placeholder="Buscar productos, marcas y mas..."
             value={searchKeyword}
             onChange={(e) => setSearchKeyword(e.target.value)}
-            autoComplete='off'
+            autoComplete="off"
           />
           <button className={'header__button'} type="submit">
-            <img
-              className={'header__search-icon'}
-              src={'src/assets/ic_Search@2x.png.png'}
-              alt={'Search icon'}
-            />
+            <img className={'header__search-icon'} src={searchIcon} alt={'Search icon'} />
           </button>
         </form>
       </div>

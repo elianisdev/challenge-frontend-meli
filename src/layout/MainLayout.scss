@@ -1,7 +1,8 @@
 .layout__main {
   display: flex;
   flex-flow: column nowrap;
-  min-height: 90vh;
+  min-height: calc(100vh - 114px);
   max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
 }

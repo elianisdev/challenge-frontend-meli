@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatCOP } from '../../utils/utils';
 import './ItemSearchResult.scss';
 
 export const ItemSearchResult = ({ product }) => {
@@ -15,7 +16,7 @@ export const ItemSearchResult = ({ product }) => {
             <h3 className="item-search-result__title">{product.title}</h3>
             <span className="item-search-result__store">Por Mercado Libre</span>
           </div>
-          <span className="item-search-result__price">{product.price}</span>
+          <span className="item-search-result__price">{formatCOP(product.price)}</span>
           {product.shipping && <span className="item-search-result__shipping">Envío gratis</span>}
         </div>
       </div>

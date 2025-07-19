@@ -1,0 +1,23 @@
+.item-detail-category {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &__text {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  &__text-value {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  &__publication {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+}

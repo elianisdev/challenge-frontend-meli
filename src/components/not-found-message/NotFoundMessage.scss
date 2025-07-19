@@ -1,0 +1,89 @@
+@use '../../styles/variables.scss';
+
+.not-found-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  &__container {
+    background-color: variables.$background-color-white;
+    border-radius: 12px;
+    padding: 48px;
+    text-align: center;
+    box-shadow: 0 0 1px variables.$gray-color-light;
+    max-width: 500px;
+    width: 100%;
+
+    @media (max-width: 768px) {
+      padding: 32px 24px;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 32px;
+    
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &__title {
+    font-size: 72px;
+    font-weight: 700;
+    color: variables.$black-color;
+    margin: 0 0 16px 0;
+    line-height: 1;
+
+    @media (max-width: 768px) {
+      font-size: 56px;
+    }
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: 600;
+    color: variables.$gray-color-light;
+    margin: 0 0 16px 0;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+    }
+  }
+
+  &__description {
+    font-size: 16px;
+    color: variables.$gray-color-light;
+    margin: 0 0 32px 0;
+    line-height: 1.5;
+  }
+
+  &__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    min-width: 140px;
+
+    &--primary {
+      background-color: variables.$blue-color;
+      color: variables.$background-color-white;
+    }
+  }
+} 

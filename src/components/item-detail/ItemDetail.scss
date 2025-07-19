@@ -5,9 +5,16 @@
   flex-direction: column;
   gap: 28px;
   background-color: variables.$background-color-white;
-  margin: 24px 0;
+  margin: 10px 0 24px 0;
+  width: 100%;
 
   &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px;
+  }
+
+  &__main {
     display: flex;
     gap: 48px;
     background-color: variables.$background-color-white;
@@ -17,14 +24,15 @@
 
   &__gallery {
     display: flex;
-    gap: 16px;
+    flex: 1;
   }
 
   &__thumbnails {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 0 24px;
+    padding: 0 24px 0 0;
+    flex: 1;
   }
 
   &__thumbnail {
@@ -33,86 +41,112 @@
     object-fit: cover;
     border-radius: 4px;
     cursor: pointer;
-    border: 2px solid transparent;
+    border: 1px solid variables.$gray-color-light-2;
     transition: border-color 0.2s ease;
 
     &:hover {
-      border-color: variables.$blue-color;
+      border: 2px solid variables.$blue-color;
     }
 
     &--active {
-      border-color: variables.$blue-color;
+      border: 2px solid variables.$blue-color;
     }
   }
 
+  &__image-container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__image {
-    width: 680px;
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
   }
 
   &__info {
     display: flex;
     flex-direction: column;
-    font-family: 'Proxima Nova', sans-serif;
+    font-family: variables.$font-family-base;
     font-size: 16px;
-    color: rgba(0, 0, 0, 0.9);
+    color: variables.$black-color;
+    gap: 28px;
+    margin-top: 28px;
+    flex: 1;
   }
 
   &__condition {
     font-size: 14px;
-    color: #999;
-    margin-bottom: 8px;
+    color: variables.$gray-color-light;
+    margin: 0;
+  }
+
+  &__title-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__title {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 600;
-    margin-bottom: 24px;
+    color: variables.$black-color;
+    margin: 0
   }
 
   &__seller {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    color: variables.$black-color-light-2;
+    margin: 0;
+  }
+
+  &__price-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__price {
     font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 8px;
+    font-weight: 400;
+    color: variables.$black-color;
+    margin: 0;
   }
 
   &__installment {
-    color: #00a650;
-    font-size: 14px;
-    margin-bottom: 16px;
+    color: variables.$green-color;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
   }
 
   &__shipping {
-    font-size: 14px;
-    color: #00a650;
-    font-weight: 500;
-    margin-bottom: 16px;
+    font-size: 18px;
+    color: variables.$green-color;
+    font-weight: 600;
+    margin: 0;
   }
 
   &__color {
     font-size: 14px;
-    margin-bottom: 24px;
+    margin: 0;
   }
 
   &__description {
-    padding: 24px;
-    border-radius: 4px;
+    padding: 24px 0;
+    border-top: 1px solid variables.$gray-color-light-2;
+  }
 
-    h2 {
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
+  &__description-title {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: variables.$black-color-light;
+  }
 
-    p {
-      font-size: 16px;
-      color: #333;
-      line-height: 1.6;
-    }
+  &__description-text {
+    font-size: variables.$font-size-base;
+    color: variables.$gray-color-light;
   }
 }
